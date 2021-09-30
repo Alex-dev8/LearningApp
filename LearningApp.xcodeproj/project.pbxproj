@@ -12,6 +12,9 @@
 		FA55192A27060546000F2E89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA55192927060546000F2E89 /* Preview Assets.xcassets */; };
 		FA55193127060582000F2E89 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55193027060582000F2E89 /* HomeView.swift */; };
 		FA551938270605FD000F2E89 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551937270605FD000F2E89 /* ContentModel.swift */; };
+		FA55193B27061EE5000F2E89 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FA55193927061EE4000F2E89 /* data.json */; };
+		FA55193C27061EE5000F2E89 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = FA55193A27061EE4000F2E89 /* style.html */; };
+		FA55193E270620C8000F2E89 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55193D270620C8000F2E89 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		FA55192927060546000F2E89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA55193027060582000F2E89 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA551937270605FD000F2E89 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		FA55193927061EE4000F2E89 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FA55193A27061EE4000F2E89 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
+		FA55193D270620C8000F2E89 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		FA551934270605B5000F2E89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA55193D270620C8000F2E89 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +106,8 @@
 		FA551935270605BA000F2E89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA55193927061EE4000F2E89 /* data.json */,
+				FA55193A27061EE4000F2E89 /* style.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA55192A27060546000F2E89 /* Preview Assets.xcassets in Resources */,
+				FA55193B27061EE5000F2E89 /* data.json in Resources */,
+				FA55193C27061EE5000F2E89 /* style.html in Resources */,
 				FA55192727060546000F2E89 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +194,7 @@
 				FA55192327060545000F2E89 /* LearningApp.swift in Sources */,
 				FA55193127060582000F2E89 /* HomeView.swift in Sources */,
 				FA551938270605FD000F2E89 /* ContentModel.swift in Sources */,
+				FA55193E270620C8000F2E89 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
