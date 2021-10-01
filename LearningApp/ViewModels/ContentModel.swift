@@ -24,6 +24,9 @@ class ContentModel: ObservableObject {
     @Published var lessonDescription = NSAttributedString()
     var styleData: Data?
     
+    // Current selected content and test
+    @Published var currentContentSelected: Int?
+    
     init() {
         getLocalData()
     }
@@ -70,7 +73,6 @@ class ContentModel: ObservableObject {
         
         // set the current module
         currentModule = modules[currentModuleIndex]
-        print("The current module is \(currentModuleIndex)")
     }
     
     func beginLesson(_ lessonIndex: Int) {
