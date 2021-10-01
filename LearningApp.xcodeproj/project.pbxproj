@@ -21,6 +21,7 @@
 		FA61CA042706DC3B0026BC14 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA032706DC3B0026BC14 /* ContentDetailView.swift */; };
 		FA61CA072706E0470026BC14 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA61CA062706E0470026BC14 /* AVKit.framework */; };
 		FA61CA092706E1800026BC14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA082706E1800026BC14 /* Constants.swift */; };
+		FA61CA2E270745600026BC14 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA2D270745600026BC14 /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FA61CA032706DC3B0026BC14 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		FA61CA062706E0470026BC14 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		FA61CA082706E1800026BC14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA61CA2D270745600026BC14 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				FA61C9FF2706D0EB0026BC14 /* ContentView.swift */,
 				FA61CA012706D79A0026BC14 /* ContentViewRow.swift */,
 				FA61CA032706DC3B0026BC14 /* ContentDetailView.swift */,
+				FA61CA2D270745600026BC14 /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				FA61CA042706DC3B0026BC14 /* ContentDetailView.swift in Sources */,
 				FA55193127060582000F2E89 /* HomeView.swift in Sources */,
 				FA61CA022706D79A0026BC14 /* ContentViewRow.swift in Sources */,
+				FA61CA2E270745600026BC14 /* CodeTextView.swift in Sources */,
 				FA551938270605FD000F2E89 /* ContentModel.swift in Sources */,
 				FA55193E270620C8000F2E89 /* Models.swift in Sources */,
 				FA61CA092706E1800026BC14 /* Constants.swift in Sources */,
