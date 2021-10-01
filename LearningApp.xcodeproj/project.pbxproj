@@ -18,6 +18,9 @@
 		FA55194027062A21000F2E89 /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55193F27062A21000F2E89 /* HomeViewRow.swift */; };
 		FA61CA002706D0EB0026BC14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C9FF2706D0EB0026BC14 /* ContentView.swift */; };
 		FA61CA022706D79A0026BC14 /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA012706D79A0026BC14 /* ContentViewRow.swift */; };
+		FA61CA042706DC3B0026BC14 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA032706DC3B0026BC14 /* ContentDetailView.swift */; };
+		FA61CA072706E0470026BC14 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA61CA062706E0470026BC14 /* AVKit.framework */; };
+		FA61CA092706E1800026BC14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA082706E1800026BC14 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		FA55193F27062A21000F2E89 /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		FA61C9FF2706D0EB0026BC14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA61CA012706D79A0026BC14 /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		FA61CA032706DC3B0026BC14 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		FA61CA062706E0470026BC14 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		FA61CA082706E1800026BC14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA61CA072706E0470026BC14 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,7 @@
 			children = (
 				FA55192127060545000F2E89 /* LearningApp */,
 				FA55192027060545000F2E89 /* Products */,
+				FA61CA052706E0470026BC14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +100,7 @@
 				FA55193F27062A21000F2E89 /* HomeViewRow.swift */,
 				FA61C9FF2706D0EB0026BC14 /* ContentView.swift */,
 				FA61CA012706D79A0026BC14 /* ContentViewRow.swift */,
+				FA61CA032706DC3B0026BC14 /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 			children = (
 				FA55193927061EE4000F2E89 /* data.json */,
 				FA55193A27061EE4000F2E89 /* style.html */,
+				FA61CA082706E1800026BC14 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +136,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA61CA052706E0470026BC14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA61CA062706E0470026BC14 /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +221,12 @@
 				FA55192327060545000F2E89 /* LearningApp.swift in Sources */,
 				FA55194027062A21000F2E89 /* HomeViewRow.swift in Sources */,
 				FA61CA002706D0EB0026BC14 /* ContentView.swift in Sources */,
+				FA61CA042706DC3B0026BC14 /* ContentDetailView.swift in Sources */,
 				FA55193127060582000F2E89 /* HomeView.swift in Sources */,
 				FA61CA022706D79A0026BC14 /* ContentViewRow.swift in Sources */,
 				FA551938270605FD000F2E89 /* ContentModel.swift in Sources */,
 				FA55193E270620C8000F2E89 /* Models.swift in Sources */,
+				FA61CA092706E1800026BC14 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
