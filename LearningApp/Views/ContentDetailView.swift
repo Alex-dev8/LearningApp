@@ -4,9 +4,9 @@
 //
 //  Created by Alex Cannizzo on 01/10/2021.
 //
-
-import SwiftUI
 import AVKit
+import SwiftUI
+
 
 struct ContentDetailView: View {
     
@@ -22,7 +22,6 @@ struct ContentDetailView: View {
                 VideoPlayer(player: AVPlayer(url: url!))
                     .cornerRadius(10)
             }
-            
             //Description
             
             // Show Next lesson button only if there is a next lesson
@@ -50,6 +49,7 @@ struct ContentDetailView: View {
         .padding()
     }
 }
+
 
 struct ContentDetailView_Previews: PreviewProvider {
     static var previews: some View {

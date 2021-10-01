@@ -57,7 +57,6 @@ class ContentModel: ObservableObject {
     // MARK: - Module navigation methods
     
     func beginModule(_ moduleid: Int) {
-        
         // find index for module id
         for index in 0..<modules.count {
             if modules[index].id == moduleid {
@@ -69,6 +68,7 @@ class ContentModel: ObservableObject {
         
         // set the current module
         currentModule = modules[currentModuleIndex]
+        print("The current module is \(currentModuleIndex)")
     }
     
     func beginLesson(_ lessonIndex: Int) {
@@ -76,12 +76,13 @@ class ContentModel: ObservableObject {
         // Check that the lesson index is within range of module lessons
         if lessonIndex < currentModule!.content.lessons.count {
             currentLessonIndex = lessonIndex
+        
         } else {
             currentLessonIndex = 0
         }
         
         // set the current lesson
-        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        currentLesson = currentModule!.content.lessons[0]
     }
     
     func nextLesson() {

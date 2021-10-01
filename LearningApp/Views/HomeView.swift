@@ -24,14 +24,14 @@ struct HomeView: View {
                                 
                                 NavigationLink {
                                     ContentView()
-                                        .onAppear {
-                                            model.beginModule(module.id)
-                                        }
+                                    
                                 } label: {
                                     // learning card
                                     HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                 }
-                                
+                                .onAppear {
+                                    model.beginModule(module.id)
+                                }
                                 
                                 
                                 // test card
