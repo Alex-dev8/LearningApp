@@ -13,10 +13,11 @@ struct TestView: View {
     @State var selectedAnswerIndex: Int?
     @State var numCorrect = 0
     @State var submitted = false
+    @State var showResults = false
     
     var body: some View {
         
-        if model.currentQuestion != nil {
+        if model.currentQuestion != nil && showResults == false {
             VStack(alignment: .leading) {
                 
                 // question number
@@ -26,7 +27,7 @@ struct TestView: View {
                 // question
                 CodeTextView()
                     .padding(.horizontal, 20)
-                    
+                
                 
                 // answers
                 ScrollView {
@@ -91,12 +92,23 @@ struct TestView: View {
                     
                     // check if answer has been submitted
                     if submitted == true {
-                        // answer has already been submitted, move to the next question
-                        model.nextQuestion()
                         
-                        // reset properties
-                        submitted = false
-                        selectedAnswerIndex = nil
+                        // check if it's the last question
+                        if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
+                            
+                            
+                            // show the results
+                            showResults = true
+                        }
+                        else {
+                            
+                            // answer has already been submitted, move to the next question
+                            model.nextQuestion()
+                            
+                            // reset properties
+                            submitted = false
+                            selectedAnswerIndex = nil
+                        }
                     } else {
                         // submit the answer
                         
@@ -126,25 +138,29 @@ struct TestView: View {
                 
             }
             .navigationTitle("\(model.currentModule?.category ?? "") Test")
-        } else {
-            // test hasn't loaded yet
+        } else if showResults == true {
+            TestResultView(numCorrect: numCorrect)
+        }
+        else {
             ProgressView()
         }
         
     }
     
     var buttonText: String {
-        // check if answer has been submitted
+        
+        // Check if answer has been submitted
         if submitted == true {
             if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
-                // this is the last question
+                // This is the last question
                 return "Finish"
-            } else {
-                // there is a next question
+            }
+            else {
+                // There is a next question
                 return "Next"
             }
-            
-        } else {
+        }
+        else {
             return "Submit"
         }
     }

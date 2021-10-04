@@ -151,8 +151,8 @@ class ContentModel: ObservableObject {
             codeText = addStyling(currentQuestion!.content)
         } else {
             // if not, then reset the properties
-            currentLessonIndex = 0
-            currentLesson = nil
+            currentQuestionIndex = 0
+            currentQuestion = nil
         }
         
         
