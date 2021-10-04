@@ -33,7 +33,11 @@ class ContentModel: ObservableObject {
     @Published var currentTestSelected: Int?
     
     init() {
+        // parse local included json data
         getLocalData()
+        
+        // download remote json data and parse
+        getRemoteData()
     }
     
     // MARK: - Data methods
@@ -62,6 +66,52 @@ class ContentModel: ObservableObject {
         } catch {
             print(error)
         }
+    }
+    
+    func getRemoteData() {
+        
+        // string path
+        let urlString = "https://alex-dev8.github.io/LearningApp-Data/data2.json"
+        
+        //create url object
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // couldn't create url
+            return
+        }
+        
+        // create url request object
+        let request = URLRequest(url: url!)
+        
+        // get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            
+            // check if there's an error
+            guard error == nil else {
+                return
+            }
+            
+            // create json decoder
+            let decoder = JSONDecoder()
+            
+            //decode
+            do {
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                // append parsed modules into modules property
+                self.modules += modules
+            } catch {
+                // couldn't parse json
+            }
+            
+        }
+        
+        // kick off the data task
+        dataTask.resume()
+        
     }
     
     // MARK: - Module navigation methods
@@ -121,7 +171,6 @@ class ContentModel: ObservableObject {
         }
     }
     
-    
     func beginTest(_ moduleId: Int) {
         
         // set current module
@@ -138,10 +187,9 @@ class ContentModel: ObservableObject {
         }
     }
     
-    
     func nextQuestion() {
         
-         // advance the next question
+        // advance the next question
         currentQuestionIndex += 1
         
         // chech that it's within the range of questions
@@ -157,7 +205,6 @@ class ContentModel: ObservableObject {
         
         
     }
-    
     
     // MARK: - Code Styling
     
