@@ -4,9 +4,9 @@
 //
 //  Created by Alex Cannizzo on 01/10/2021.
 //
+
 import AVKit
 import SwiftUI
-
 
 struct ContentDetailView: View {
     
@@ -21,6 +21,8 @@ struct ContentDetailView: View {
             if url != nil {
                 VideoPlayer(player: AVPlayer(url: url!))
                     .cornerRadius(10)
+            } else {
+                ProgressView()
             }
             //Description
             CodeTextView()

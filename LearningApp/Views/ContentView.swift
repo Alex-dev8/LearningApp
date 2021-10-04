@@ -23,7 +23,6 @@ struct ContentView: View {
                             ContentDetailView()
                                 .onAppear {
                                     model.beginLesson(index)
-                                    print(index)
                                 }
                         } label: {
                             ContentViewRow(index: index)
@@ -31,7 +30,9 @@ struct ContentView: View {
                         
                         
                     }
+                   
                 }
+                
             }
             .accentColor(.black)
             .padding()

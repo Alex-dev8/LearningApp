@@ -20,12 +20,17 @@ class ContentModel: ObservableObject {
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
     
+    // Current question
+    @Published var currentQuestion: Question?
+    var currentQuestionIndex = 0
+    
     // current lesson explanation
-    @Published var lessonDescription = NSAttributedString()
+    @Published var codeText = NSAttributedString()
     var styleData: Data?
     
     // Current selected content and test
     @Published var currentContentSelected: Int?
+    @Published var currentTestSelected: Int?
     
     init() {
         getLocalData()
@@ -86,8 +91,10 @@ class ContentModel: ObservableObject {
         }
         
         // set the current lesson
-        currentLesson = currentModule!.content.lessons[0]
-        lessonDescription = addStyling(currentLesson!.explanation)
+        
+        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        print("The current lesson is: \(currentLesson!)")
+        codeText = addStyling(currentLesson!.explanation)
     }
     
     func nextLesson() {
@@ -98,7 +105,7 @@ class ContentModel: ObservableObject {
         if currentLessonIndex < currentModule!.content.lessons.count {
             // set current lesson property
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
-            lessonDescription = addStyling(currentLesson!.explanation)
+            codeText = addStyling(currentLesson!.explanation)
         } else {
             // reset lesson state
             currentLessonIndex = 0
@@ -111,6 +118,23 @@ class ContentModel: ObservableObject {
             return true
         } else {
             return false
+        }
+    }
+    
+    
+    func beginTest(_ moduleId: Int) {
+        
+        // set current module
+        beginModule(moduleId)
+        
+        //set the current question
+        currentQuestionIndex = 0
+        
+        // if there are questions, set the current question to the first one
+        if currentModule?.test.questions.count ?? 0 > 0 {
+            currentQuestion = currentModule?.test.questions[currentQuestionIndex]
+            
+            codeText = addStyling(currentQuestion!.content)
         }
     }
     
